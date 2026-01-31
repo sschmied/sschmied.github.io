@@ -1,0 +1,20 @@
+{
+  "name": "Surf Pop-Up AI",
+  "short_name": "SurfAI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#0077be",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192/0077be/ffffff?text=Surf",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512/0077be/ffffff?text=Surf",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

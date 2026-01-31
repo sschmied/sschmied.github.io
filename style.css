@@ -1,0 +1,80 @@
+:root {
+    --primary: #0077be;
+    --bg: #121212;
+    --text: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+h1 { margin: 0 0 10px 0; font-size: 1.2rem; }
+h2 { font-size: 1rem; color: #ccc; margin-bottom: 5px; }
+
+.controls, .recording-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button, .file-upload {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:disabled { background: #555; cursor: not-allowed; }
+button:hover:not(:disabled) { opacity: 0.9; }
+
+input[type="file"] { display: none; }
+
+#status { font-size: 0.8rem; color: #aaa; margin: 0; }
+
+/* Main Split Layout */
+.container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.video-wrapper, .canvas-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video, canvas {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+    background: #000;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}

@@ -1,1 +1,46 @@
-<h1>Hello world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf Pop-Up Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🏄 A Surf Pop-Up Trainer</h1>
+        <div class="controls">
+            <button id="webcamBtn">Start Webcam</button>
+            <label class="file-upload">
+                Upload Video
+                <input type="file" id="uploadBtn" accept="video/*">
+            </label>
+        </div>
+        <div class="recording-controls">
+            <button id="recordBtn" disabled>Start Recording Analysis</button>
+            <button id="downloadBtn" disabled>Download Analysis</button>
+        </div>
+        <p id="status">Loading MoveNet Model...</p>
+    </header>
+
+    <main class="container">
+        <div class="video-wrapper">
+            <h2>Raw Input</h2>
+            <video id="inputVideo" playsinline muted autoplay></video>
+        </div>
+
+        <div class="canvas-wrapper">
+            <h2>Pose Estimation</h2>
+            <canvas id="outputCanvas"></canvas>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
